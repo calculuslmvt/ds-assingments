@@ -7,7 +7,7 @@ void insertion(int*a,int n)
     
     for(int i=1;i<n;i++)
     {   key=a[i];
-        if(key<a[i-1]) {
+        if(key<a[i-1]) {                       // optimisation for reducing time complexity
       
         for(int j=i;j>0;j--)
            { 
