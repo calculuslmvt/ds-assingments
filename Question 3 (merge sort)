@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 
-void merge(int*a,int s,int e)               // merging function
+void merge(int*a,int s,int e)               // merging  function
 {   
     int mid=(s+e)/2;
     int i=s;
