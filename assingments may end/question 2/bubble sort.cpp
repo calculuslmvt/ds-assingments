@@ -3,14 +3,14 @@ using namespace std;
 
 void bubblesort(int*a,int n)
 {   int i=n-1;
-    while(i>0)
+    while(i>0)                                        // outer loop
     {
-        for(int j=0;j<i;j++)
+        for(int j=0;j<i;j++)                           // inner loop(depends on outer loop)
         {
             if(a[j]>a[j+1])
             { 
              
-               a[j]=a[j]+a[j+1];
+               a[j]=a[j]+a[j+1];                    // swaping elements without using third variable
                 a[j+1]=a[j]-a[j+1];
                 a[j]=a[j]-a[j+1];
                 
@@ -31,17 +31,17 @@ int main(void){
     int n;
     
     
-    cin>>n;
-    for(int i=0;i<n;i++)
+    cin>>n;                             // inserting size of array
+    for(int i=0;i<n;i++)                // inserting elements of array
     {
         cin >>a[i];
         
         
     }
     
-    bubblesort(a,n);
+    bubblesort(a,n);                    // calling bubble sort
     
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)                // printing sorted array
     {
         cout<<a[i];
         
