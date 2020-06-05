@@ -48,7 +48,7 @@ int main()
 { int n; int*a=(int*)malloc(sizeof(int*)); cin>>n; for(int i=0;i<n;i++){cin>>a[i];}  //  taking input of the array
 
 
-quick(a,0,n-1);                                                                     // calling quick function for quick sorting algorithm
+quick(a,0,n-1);                                  // calling quick function for quick sorting algorithm
 for(int i=0;i<n;i++){cout<<a[i]<<" ";}          // printing the elements
     
     
