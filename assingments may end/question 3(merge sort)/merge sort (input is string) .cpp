@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 
-void merge(int*a,int s,int e)               // merging  function
+void merge(int*a,int s,int e)               // merge  function
 {   
     int mid=(s+e)/2;
     int i=s;
@@ -53,10 +53,10 @@ void mergesort(int*a,int s, int e)        //  dividing into subparts functions
    { return;}
     
     int mid=(s+e)/2;
-    
+                                           // dividing and recursively solving sub arrays
     mergesort(a,s,mid);
     mergesort(a,mid+1,e);
-    merge(a,s,e);
+    merge(a,s,e);                         // calling merge function
 }
 
 
@@ -72,14 +72,14 @@ int main(void){
     int n;
     int*a=(int*)malloc(sizeof(int*));
     
-    // entering string 
+                                                         // entering string 
     char*s=(char*)malloc(sizeof(char*));
     cin>>s;
     n=strlen(s);
     
     cout<<"size of string " <<n<<" ";
      
-    // transfering string into ascii valued array
+                                                         // transfering string into ascii valued array
     
      
      for(int i=0;i<n;i++)
@@ -89,11 +89,11 @@ int main(void){
      }
     
     
-   mergesort(a,0,n-1);     // calling merge sort function
+   mergesort(a,0,n-1);                                       // calling merge sort function
     
     
     
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)                                     // printing sorted string
      {
          cout<<char(a[i]);
          
